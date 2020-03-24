@@ -4,10 +4,10 @@ require('dotenv/config');
 ///declare the port
 const PORT = process.env.PORT || 5000;
 
-const main = () => {
+const main = async () => {
 	///launch the server
-	app.listen(PORT, () => console.log(`Server running on port >>>${PORT}<<<`));
-	// app.listen(4000, () => 'Server on port 4000');
+	await app.listen(PORT);
+	console.log(`Server running on port >>>${PORT}<<<`);
 };
 
 ///execute main function
