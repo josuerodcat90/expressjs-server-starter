@@ -40,4 +40,4 @@
 
 (This command will download all the images from DockerHub if you don't already have them on your computer.)
 
-4.-Run 'docker-compose up' in the terminal to start the Docker container, see the logs in terminal if server and database started successfully.
+4.-Run `docker-compose up` in the terminal to start the Docker container, see the logs in terminal if server and database started successfully.
