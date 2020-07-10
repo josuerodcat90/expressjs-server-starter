@@ -7,7 +7,7 @@
 
 2.-Make sure you have MongoDB installed correctly on your computer.
 
-3.-If you don't installed MongoDb as a service, you must start it before, running `mongod` on your terminal.
+3.-If you don't installed MongoDB as a service, you must start it before, running `mongod` on your terminal.
 
 
 #### --To run on Docker containers:
