@@ -1,8 +1,8 @@
 # Expressjs Server Starter Boilerplate
 ### A simple ExpressJs and MongoDb starter project, integrated with Docker Containers.
 
-## Prerequisites to run this project on your computer:
-#### To run locally:
+## -Prerequisites to run this project on your computer:
+#### --To run locally:
 1.-Make sure you have NodeJs installed correctly on your computer.
 
 2.-Make sure you have MongoDB installed correctly on your computer.
@@ -10,7 +10,7 @@
 3.-If you don't installed MongoDb as a service, you must start it before, running `mongod` on your terminal.
 
 
-#### To run on Docker containers:
+#### --To run on Docker containers:
 1.-Make sure you have Docker installed correctly on your computer.
 
 2.-Make sure you have activated the virtualization option in your Bios to use Hyper-V technology with Docker.
@@ -19,8 +19,8 @@
 
 
 
-## Instructions:
-#### To run this project locally on your computer:
+## -Instructions:
+#### --To run this project locally on your computer:
 1.-Clone this repository on your computer.
 
 2.-Locate your code editor inside the project folder.
@@ -31,7 +31,7 @@
 
 
 
-#### To run this project with Docker containers:
+#### --To run this project with Docker containers:
 1.-Clone this repository on your computer.
 
 2.-Locate your code editor inside the project folder.
