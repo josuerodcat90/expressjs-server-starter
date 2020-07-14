@@ -7,7 +7,7 @@
 
 2.-Make sure you have MongoDB installed correctly on your computer.
 
-3.-If you don't installed MongoDb as a service, you must start it before, running `mongod` on your terminal.
+3.-If you don't installed MongoDB as a service, you must start it before, running `mongod` on your terminal.
 
 
 #### --To run on Docker containers:
@@ -40,4 +40,4 @@
 
 (This command will download all the images from DockerHub if you don't already have them on your computer.)
 
-4.-Run 'docker-compose up' in the terminal to start the Docker container, see the logs in terminal if server and database started successfully.
+4.-Run `docker-compose up` in the terminal to start the Docker container, see the logs in terminal if server and database started successfully.
