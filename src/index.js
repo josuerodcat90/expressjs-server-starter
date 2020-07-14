@@ -1,9 +1,11 @@
 const app = require('./app');
 const connectDB = require('./database');
+const enVars = process.env;
+
 require('dotenv/config');
 
 ///declare the port
-const PORT = process.env.PORT || 3000;
+const PORT = (enVars.ENV = 'DOCKER' ? enVars.DOCKER_PORT : enVars.PORT);
 
 const main = async () => {
 	///launch the server

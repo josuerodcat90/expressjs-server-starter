@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+const enVars = process.env;
+const dbName = 'test';
 
 ///connection function
 const connectDB = async () => {
 	///get the URI from .env file or set a default
-	const URI = process.env.MONGODB_URI || 'mongodb://mongo/test';
+	const URI = (enVars.ENV = 'DOCKER' ? `mongodb://mongo/${dbName}` : enVars.MONGODB_URI);
 
-	///try to connect the to the Atlas DB
+	///try to connect the to the DB
 	try {
 		await mongoose.connect(URI, {
 			useNewUrlParser: true,
