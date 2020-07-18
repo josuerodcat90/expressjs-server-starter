@@ -5,7 +5,7 @@ const dbName = 'test';
 ///connection function
 const connectDB = async () => {
 	///get the URI from .env file or set a default
-	const URI = (enVars.ENV = 'DOCKER' ? `mongodb://mongo/${dbName}` : enVars.MONGODB_URI);
+	const URI = enVars.ENV === 'DOCKER' ? `mongodb://mongo/${dbName}` : enVars.MONGODB_URI;
 
 	///try to connect the to the DB
 	try {
