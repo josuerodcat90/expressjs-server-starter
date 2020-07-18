@@ -1,23 +1,33 @@
 {
   "name": "server",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple Node(Express) Server Boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "nyc --reporter=html mocha src/test --exit",
+    "clean": "rimraf .nyc_output coverage"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "express",
+    "mongodb"
+  ],
   "author": "Josue Rodriguez <josuerodcat90@gmail.com> (https://github.com/josuerodcat90)",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.6"
+    "mongoose": "^5.9.25"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2"
   }
 }

@@ -1,19 +1,27 @@
 const app = require('./app');
+const cors = require('cors');
 const connectDB = require('./database');
 const enVars = process.env;
 
 require('dotenv/config');
 
 ///declare the port
-const PORT = (enVars.ENV = 'DOCKER' ? enVars.DOCKER_PORT : enVars.PORT);
+const PORT = enVars.ENV === 'DOCKER' ? enVars.DOCKER_PORT : enVars.PORT;
 
-const main = async () => {
+const server = app.listen(PORT, () => {
 	///launch the server
-	await app.listen(PORT);
 	console.log(`Server running on port >>>${PORT}<<<`);
+
 	///Init the DB connect function
 	connectDB();
-};
 
-///execute main function
-main();
+	/// Middlewares
+	app.use(cors());
+
+	/// Routes
+	app.get('/', (req, res) => {
+		res.json({ message: 'Initial API Routes' });
+	});
+});
+
+module.exports = server;
