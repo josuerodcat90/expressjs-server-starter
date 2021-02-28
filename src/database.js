@@ -5,7 +5,8 @@ const dbName = 'test';
 ///connection function
 const connectDB = async () => {
 	///get the URI from .env file or set a default
-	const URI = enVars.ENV === 'DOCKER' ? `mongodb://mongo/${dbName}` : enVars.MONGODB_URI;
+	const URI =
+		enVars.ENV === 'DOCKER' ? `mongodb://mongo/${dbName}` : enVars.MONGODB_URI;
 
 	///try to connect the to the DB
 	try {
@@ -15,10 +16,10 @@ const connectDB = async () => {
 			useFindAndModify: false,
 			useUnifiedTopology: true,
 		});
-		console.log(`>>>DB is connected!<<<`);
+		console.log('>>>DB is connected!<<<');
 	} catch (e) {
 		///catch if something wrong happens
-		console.error(`¡Something goes wrong!`);
+		console.error('¡Something goes wrong!');
 		console.error(e);
 	}
 };
